@@ -21,7 +21,7 @@ class Command(BaseCommand):
             Funcionario.objects.create(
                 name=fake.name(),
                 enrolment=randint(1000000, 9999999),
-                cpf=fake.cpf().replace('-', '').replace('/', ''),
+                cpf=fake.cpf().replace('-', '').replace('.', ''),
                 date_of_birth=fake.date(),
                 email=fake.email(),
                 admission_date=fake.date(),

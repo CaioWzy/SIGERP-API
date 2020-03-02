@@ -20,5 +20,5 @@ class Command(BaseCommand):
             Cliente.objects.create(
                 company_name=f"{fake.company()}",
                 fantasy_name = fake.company(),
-                cnpj = fake.cnpj().replace('-', '').replace('/', '')
+                cnpj = fake.cnpj().replace('-', '').replace('/', '').replace('.', '')
             ).save()
